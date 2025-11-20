@@ -73,6 +73,19 @@ git config --global user.name "user1"
 ```shell
 git config --global user.email "user1@gmail.com"
 ```
+
+## Clone a repository, just do:
+
+```shell
+ git clone git@pqhuy87it-GitHub:pqhuy87it/project1.git /path/to/project1
+```
+
+## Change the URL of origin
+
+```shell
+ git remote set-url origin git@pqhuy87it-GitHub:pqhuy87it/flutter_project_samples.git
+```
+
 ## Reference
 - https://gist.github.com/jexchan/2351996
 - https://gist.github.com/oanhnn/80a89405ab9023894df7
