@@ -80,22 +80,16 @@ git config --global user.email "user1@gmail.com"
 # Source Tree
 ```shell
 # --- Sourcetree Generated ---
-Host github.com
+Host pqhuy87it-GitHub
 	HostName github.com
-	User tungnh
-	PreferredAuthentications publickey
-	IdentityFile /Users/phamhuy/.ssh/tungnh-GitHub
-	UseKeychain yes
-	AddKeysToAgent yes
+	IdentityFile /Users/phamhuy/.ssh/pqhuy87it-GitHub
+	IdentitiesOnly yes
 # ----------------------------
 
 # --- Sourcetree Generated ---
-Host github.com
+Host tungnh-expand-GitHub
 	HostName github.com
-	User pqhuy87it
-	PreferredAuthentications publickey
-	IdentityFile /Users/phamhuy/.ssh/pqhuy87it-GitHub
-	UseKeychain yes
-	AddKeysToAgent yes
+	IdentityFile /Users/phamhuy/.ssh/tungnh-expand-GitHub
+	IdentitiesOnly yes
 # ----------------------------
 ```
