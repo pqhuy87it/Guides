@@ -112,4 +112,44 @@ git branch -r | grep "origin" | sed 's/origin\///' > danh_sach_nhanh.txt
   * `sed 's/origin\///'`: Thay thế (xóa) chữ "origin/" đi.
   * `> filename.txt`: Ghi kết quả vào file (thay vì hiện lên màn hình).
 
+## 5. Lấy tên các file đã thay đổi trong 1 commit
+
+### Chỉ hiện tên file
+
+```bash
+git show --name-only <commit-hash> > name_file_changed.txt 
+```
+
+### Hiện trạng thái Thêm/Sửa/Xóa
+
+```bash
+git show --name-status <commit-hash> > name_file_changed.txt 
+```
+
+  * **Kết quả hiển thị dạng:**
+    ```text
+    M   src/main.js       (Modified - Đã sửa)
+    A   images/logo.png   (Added - Mới thêm)
+    D   old_config.txt    (Deleted - Đã xóa)
+    ```
+
+### Dùng cho Script/Automation
+
+```bash
+git diff-tree --no-commit-id --name-only -r <commit-hash> > name_file_changed.txt
+```
+
+### Cách xem thống kê (Số dòng thêm/bớt)
+
+```bash
+git show --stat <commit-hash>
+```
+
+-----
+
+### Lấy file của commit mới nhất
+
+```bash
+git show --name-only HEAD
+```
 
