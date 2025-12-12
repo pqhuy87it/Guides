@@ -90,5 +90,26 @@ Nếu bạn muốn xem commit trên server (ví dụ Github/Gitlab) mà chưa pu
 git fetch origin  # Cập nhật thông tin mới nhất từ server trước
 git log --oneline origin/<tên_nhánh>
 ```
+## 4.Lấy tên các branch trên origin
+
+### Lọc riêng các nhánh của `origin` và loại bỏ các khoảng trắng ở đầu dòng để danh sách thẳng hàng
+
+```bash
+git branch -r | grep "origin" | awk '{$1=$1;print}' > danh_sach_nhanh.txt
+```
+
+### Chỉ lấy tên nhánh, bỏ chữ 'origin/'
+
+
+```bash
+git branch -r | grep "origin" | sed 's/origin\///' > danh_sach_nhanh.txt
+```
+
+**Giải thích các lệnh:**
+
+  * `git branch -r`: Liệt kê các remote branch.
+  * `grep "origin"`: Chỉ chọn các dòng có chứa chữ "origin".
+  * `sed 's/origin\///'`: Thay thế (xóa) chữ "origin/" đi.
+  * `> filename.txt`: Ghi kết quả vào file (thay vì hiện lên màn hình).
 
 
